@@ -9,7 +9,7 @@ class DBHlpr(context: Context):SQLiteOpenHelper(context,"details",null,1) {
     var database:SQLiteDatabase=writableDatabase
     override fun onCreate(p0: SQLiteDatabase?) {
         if (p0 != null) {
-            p0.execSQL("create table celebebrity(name text,taboo1 text,taboo2 text,taboo3 text)")
+            p0.execSQL("create table celebebrity(_id integer primary key autoincrement,name text,taboo1 text,taboo2 text,taboo3 text)")
         }
     }
 
